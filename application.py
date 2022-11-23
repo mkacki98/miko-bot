@@ -1,16 +1,10 @@
 from flask import Flask, request
+from chatbot import Chatbot
 from response import send_message
 from configs import app_config
 import sys
 
 application = Flask(__name__)
-
-
-def get_bot_response(message):
-    """This is just a dummy function, returning a variation of what
-    the user said. Replace this function with one connected to chatbot."""
-    return "This is a dummy response to '{}'".format(message)
-
 
 def verify_webhook(req):
     print(f'{req.args.get("hub.verify_token")} is the hub.verifyß', file=sys.stderr)
@@ -23,7 +17,10 @@ def verify_webhook(req):
 def respond(sender, message):
     """Formulate a response to the user and
     pass it on to a function that sends it."""
-    response = get_bot_response(message)
+
+    chatbot = Chatbot()
+    response = chatbot.respond(message)
+    
     send_message(sender, response)
 
 
