@@ -1,10 +1,6 @@
 from flask import Flask, request
 from response import send_message
 from configs import app_config
-from datetime import datetime
-import time
-import random
-
 import sys
 
 application = Flask(__name__)
@@ -56,9 +52,6 @@ def listen():
     if request.method == "POST":
         payload = request.json
         event = payload["entry"][0]["messaging"]
-        if datetime.now().minute == 30 and datetime.now().second == 21:
-            send_message(5189524037820269, "This is a message that I sent without an event.")
-            
         for x in event:
             if is_user_message(x):
                 text = x["message"]["text"]

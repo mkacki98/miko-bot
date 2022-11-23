@@ -3,5 +3,3 @@ app_config = {
     "PAGE_ACCESS_TOKEN": "EAAG8Ni0HQOUBAB7cNqafOFryu1PWj8vJkuoMFGZBuxVTq0jZCnEZBacQQUigYgn5KC5sV5ZAncZB62TcrnNndPIpfVrgc3cwhB62OxUr0SbQ42QSxJEuFZCAF9xfMQpERNVQuMSy8dUKxtYqPAlvcOkNTnQn2fn6x9k158QDG5AxEzCLY7PTGX",
     "FB_API_URL": "https://graph.facebook.com/v2.6/me/messages",
 }
-
-birthdays = {"Mikolaj Kacki": {"id": 5189524037820269, "birthday": "2022-11-23"}}

@@ -10,7 +10,9 @@ Resources used:
 
 TODO
 
-* figure out how to send a triggering message at a certain time with FB API
 * change the app so that it rememebers the past messages sent and can stop the conversation etc. (not only 1 message sender)
-* get IDs of my friends and populate the birthday dictionary
-* take the app live to enable requests from users that are not myself
+* write a simple bot
+* write a rasa bot
+* document the code and modules
+* update readme
+* record how it works (gif)
