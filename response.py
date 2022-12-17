@@ -5,9 +5,8 @@ from configs import app_config
 def send_message(recipient_id, text):
     """Send a response to Facebook"""
 
-    message = text + f", your id is {recipient_id}"
     payload = {
-        "message": {"text": message},
+        "message": {"text": text},
         "recipient": {"id": recipient_id},
         "notification_type": "regular",
     }
