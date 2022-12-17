@@ -1,6 +1,7 @@
+""" Function sending a post request to Messenger. """
+
 import requests
 from configs import app_config
-
 
 def send_message(recipient_id, text):
     """Send a response to Facebook"""

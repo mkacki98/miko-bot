@@ -1,3 +1,5 @@
+""" Defining greetings, goodbyes and responses of the echo bot. """
+
 responses = [
     "I used to be an adventurer, then an arrow in my knee changed my plans..",
     "There are things more important than you, you know..",

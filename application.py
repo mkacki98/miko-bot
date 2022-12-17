@@ -1,14 +1,16 @@
+""" Flask application that runs the bot. """
+
 from flask import Flask, request
 from chatbot import StupidBot
 from response import send_message
 from configs import app_config
-import sys
 
 application = Flask(__name__)
 
 
 def verify_webhook(req):
-    print(f'{req.args.get("hub.verify_token")} is the hub.verifyß', file=sys.stderr)
+    """ Verify credentials with the token from configs. """
+
     if req.args.get("hub.verify_token") == app_config["VERIFY_TOKEN"]:
         return req.args.get("hub.challenge")
     else:
@@ -16,8 +18,7 @@ def verify_webhook(req):
 
 
 def respond(sender, message):
-    """Formulate a response to the user and
-    pass it on to a function that sends it."""
+    """ Process and send a message via Messenger. """
 
     chatbot = StupidBot()
     response = chatbot.respond(message)
@@ -26,7 +27,8 @@ def respond(sender, message):
 
 
 def is_user_message(message):
-    """Check if the message is a message from the user"""
+    """Check if the message is a message from the user. """
+
     return (
         message.get("message")
         and message["message"].get("text")
@@ -36,7 +38,7 @@ def is_user_message(message):
 
 @application.route("/", methods=["GET", "POST"])
 def home():
-    return "This is a homepage."
+    return "Nothing interesting here. "
 
 
 @application.route("/webhook", methods=["GET", "POST"])
