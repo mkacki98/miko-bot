@@ -6,6 +6,6 @@ responses = [
     "Come to the Dark Side, we have cookies :)",
 ]
 
-greetings = ["hi", "hello", "welcome", "good morning"]
+greetings = ["hi", "hello", "welcome", "good morning", "wazaaaaaaaaap", "yo"]
 
 goodbyes = ["see you", "bye", "goodbye"]
