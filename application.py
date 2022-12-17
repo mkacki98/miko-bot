@@ -2,7 +2,6 @@
 
 from flask import Flask, request
 from chatbot import StupidBot
-from response import send_message
 from configs import app_config
 
 application = Flask(__name__)
@@ -23,7 +22,7 @@ def respond(sender, message):
     chatbot = StupidBot()
     response = chatbot.respond(message)
 
-    send_message(sender, response)
+    chatbot.send_message(sender, response)
 
 
 def is_user_message(message):
