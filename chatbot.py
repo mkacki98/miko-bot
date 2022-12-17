@@ -10,11 +10,11 @@ class StupidBot:
     def __init__(self):
 
         self.responses = [
-        "I used to be an adventurer, then an arrow in my knee changed my plans..",
-        "There are things more important than you, you know..",
-        "Did you know Peru has had 6 presidents in the past 5 years?",
-        "You should try salsa. I think you'd love it."
-            "Come to the Dark Side, we have cookies :)",
+        "i used to be an adventurer, then an arrow in my knee changed my plans..",
+        "there are things more important than you, you know..",
+        "did you know Peru has had 6 presidents in the past 5 years?",
+        "you should try salsa, i think you'd love it.",
+        "come to the dark side, we have cookies :)",
         ]
 
         self.greetings = ["hi", "hello", "welcome", "good morning", "wazaaaaaaaaap", "yo"]
