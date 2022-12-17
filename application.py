@@ -1,10 +1,11 @@
 from flask import Flask, request
-from chatbot import Chatbot
+from chatbot import StupidBot
 from response import send_message
 from configs import app_config
 import sys
 
 application = Flask(__name__)
+
 
 def verify_webhook(req):
     print(f'{req.args.get("hub.verify_token")} is the hub.verifyß', file=sys.stderr)
@@ -18,9 +19,9 @@ def respond(sender, message):
     """Formulate a response to the user and
     pass it on to a function that sends it."""
 
-    chatbot = Chatbot()
+    chatbot = StupidBot()
     response = chatbot.respond(message)
-    
+
     send_message(sender, response)
 
 
